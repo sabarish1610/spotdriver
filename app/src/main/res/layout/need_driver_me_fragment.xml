@@ -1,0 +1,182 @@
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    android:fitsSystemWindows="true"
+    >
+
+   <android.support.design.widget.AppBarLayout
+       android:id="@+id/main.appbar"
+       android:layout_width="match_parent"
+       android:layout_height="300dp"
+       android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+       android:fitsSystemWindows="true"
+       >
+
+      <android.support.design.widget.CollapsingToolbarLayout
+          android:id="@+id/collapsing"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          app:layout_scrollFlags="scroll|exitUntilCollapsed"
+          android:fitsSystemWindows="true"
+          app:contentScrim="?attr/colorPrimary"
+          app:expandedTitleMarginStart="48dp"
+          app:expandedTitleMarginEnd="64dp"
+          >
+
+         <ImageView
+             android:id="@+id/logged_in_user_profile_pic"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:scaleType="centerCrop"
+             android:fitsSystemWindows="true"
+             app:layout_collapseMode="parallax"
+             />
+         <ProgressBar
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:id="@+id/driver_profile_pic"
+             android:layout_gravity="center"
+             android:visibility="gone"/>
+
+         <android.support.v7.widget.Toolbar
+             android:id="@+id/toolbar"
+             android:layout_width="match_parent"
+             android:layout_height="?attr/actionBarSize"
+             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+             app:layout_collapseMode="pin"
+             />
+      </android.support.design.widget.CollapsingToolbarLayout>
+   </android.support.design.widget.AppBarLayout>
+
+   <android.support.v4.widget.NestedScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+
+       app:layout_behavior="@string/appbar_scrolling_view_behavior"
+       >
+
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:orientation="vertical"
+             android:layout_below="@+id/profile_layout"
+             >
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:elevation="4sp"
+                android:layout_margin="4sp"
+                android:layout_marginTop="25sp">
+            <TextView
+                android:id="@+id/logged_in_user_age"
+                android:layout_width="wrap_content"
+                android:padding="10sp"
+                android:layout_height="wrap_content"
+                android:text="Age :"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="25sp"
+                android:layout_margin="4sp"
+                android:elevation="4sp">
+
+            <TextView
+                android:id="@+id/logged_in_user_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gender :"
+                android:padding="10sp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:elevation="4sp"
+                android:layout_margin="4sp"
+                android:layout_marginTop="25sp">
+
+            <TextView
+                android:id="@+id/logged_in_user_mobile_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mobile Number :"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:padding="10sp"
+                android:textStyle="bold" />
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:elevation="4sp"
+                android:layout_margin="4sp"
+                android:layout_marginTop="25sp">
+            <TextView
+                android:id="@+id/logged_in_user_emerg1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Emergency Contact 1"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:padding="10sp"
+                android:textStyle="bold" />
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:elevation="4sp"
+                android:layout_margin="4sp"
+                android:layout_marginTop="25sp">
+            <TextView
+                android:id="@+id/logged_in_user_emerg2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Emergency Contact 2"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:padding="10sp"
+                android:textStyle="bold" />
+</android.support.v7.widget.CardView>
+         <android.support.v7.widget.CardView
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:elevation="4sp"
+             android:layout_margin="4sp"
+             android:layout_marginTop="25sp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/logged_in_user_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10sp"
+                android:text="Password : *********"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/user_change_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/logged_in_user_password"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/logged_in_user_password"
+                android:src="@drawable/ic_action_edit_image" />
+            </RelativeLayout>
+         </android.support.v7.widget.CardView>
+         </LinearLayout>
+   </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

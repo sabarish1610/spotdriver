@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    android:fitsSystemWindows="true">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/main.appbar"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:fitsSystemWindows="true"
+        >
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/car_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleMarginStart="122dp"
+            app:expandedTitleMarginEnd="64dp"
+            app:expandedTitleTextAppearance="@android:style/TextAppearance.Medium"
+            app:expandedTitleMarginBottom="85sp"
+            >
+            <com.daimajia.slider.library.SliderLayout
+                android:id="@+id/slider"
+                android:layout_width="match_parent"
+                android:layout_height="280sp"
+                >
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/car_driver_profile_pi"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="42dp"
+                    android:layout_marginLeft="27dp"
+                    android:layout_marginStart="27dp"
+                    android:src="@mipmap/ic_launcher"
+                    app:civ_border_color="@android:color/black"
+                    app:civ_border_width="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id = "@+id/car_driver_name"
+                    android:text=""
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_alignTop="@+id/car_driver_profile_pi"
+                    android:layout_toRightOf="@+id/car_driver_profile_pi"
+                    android:layout_toEndOf="@+id/car_driver_profile_pi"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="12dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id = "@+id/car_driver_detail_age"
+                    android:text="Age 23"
+                    android:textSize="15sp"
+                    android:layout_below="@+id/car_driver_name"
+                    android:layout_alignLeft="@+id/car_driver_name"
+                    android:layout_alignStart="@+id/car_driver_name" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id = "@+id/car_driver_exper"
+                    android:text="Exp:2 yrs"
+                    android:textSize="15sp"
+                    android:layout_below="@+id/car_driver_detail_age"
+                    android:layout_alignLeft="@+id/car_driver_detail_age"
+                    android:layout_alignStart="@+id/car_driver_detail_age" />
+
+            </com.daimajia.slider.library.SliderLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/car_details_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:layout_collapseMode="pin"
+                />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/nested"
+
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15sp"
+                android:elevation="5sp"
+                android:layout_margin="10sp"
+                android:id="@+id/card_car_details">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="About Car"
+                        android:layout_marginLeft="5sp"
+                        android:id="@+id/title_car_view"
+                        android:textSize="20sp"
+                        android:textStyle="bold|italic"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5sp"
+                        android:background="@android:color/darker_gray"
+                        android:layout_margin="3sp"
+                        android:layout_below="@+id/title_car_view"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Brand: Toyoto"
+                        android:id="@+id/car_brand_name"
+                        style="@style/style_for_car_details"
+                        android:layout_below="@+id/title_car_view"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Catagory:Qualis"
+                        android:layout_below="@+id/car_brand_name"
+                        android:id="@+id/car_catagory_name"
+                        style="@style/style_for_car_details"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Reg.No:TN70955"
+                        android:layout_below="@+id/car_catagory_name"
+                        style="@style/style_for_car_details"
+                        android:id="@+id/car_register_number"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Travel With : AC"
+                        android:layout_below="@+id/car_register_number"
+                        style="@style/style_for_car_details"
+                        android:id="@+id/car_travel_type"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fuel Type : Petrol"
+                        android:layout_below="@+id/car_travel_type"
+                        style="@style/style_for_car_details"
+                        android:id="@+id/car_fuel_Type"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Model : 2008"
+                        android:layout_below="@+id/car_fuel_Type"
+                        style="@style/style_for_car_details"
+                        android:id="@+id/car_man_model"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Seating : 8"
+                        android:layout_below="@+id/car_man_model"
+                        style="@style/style_for_car_details"
+                        android:id="@+id/car_seating"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Locality : Hosur,Hosur"
+                        android:layout_below="@+id/car_seating"
+                        style="@style/style_for_car_details"
+                        android:id="@+id/car_locality"
+                        android:layout_marginBottom="5sp"/>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_car_details"
+                android:elevation="5sp"
+                android:id="@+id/long_trip_catalogue_detail"
+                android:layout_margin="10sp"
+                android:visibility="gone"
+                android:layout_marginTop="15sp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_marginTop="2sp"
+                        android:layout_marginLeft="2sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Local Trip Catalog"
+                        android:textStyle="bold|italic"
+                        android:textSize="20sp"
+                        android:id="@+id/long_trip_catalogue_details"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5sp"
+                        android:background="@android:color/darker_gray"
+                        android:layout_margin="3sp"
+                        android:layout_below="@+id/long_trip_catalogue_details"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Limited Km Per Day : 100Km"
+                        android:id="@+id/car_limited_km"
+                        android:layout_below="@+id/long_trip_catalogue_details"
+                        style="@style/style_for_car_details"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Price of Limited KM : 1200"
+                        android:id="@+id/car_limited_km_pric"
+                        android:layout_below="@+id/car_limited_km"
+                        style="@style/style_for_car_details"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Per Day Limited Hrs: 1hr"
+                        android:id="@+id/car_time_limited"
+                        android:layout_below="@+id/car_limited_km_pric"
+                        style="@style/style_for_car_details"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="After Limited Per KM price : 9/km"
+                        android:id="@+id/car_exceed_price"
+                        android:layout_below="@+id/car_time_limited"
+                        style="@style/style_for_car_details"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Waiting Charges : 50/hr"
+                        android:id="@+id/local_waiting_charge"
+                        android:layout_below="@+id/car_exceed_price"
+                        style="@style/style_for_car_details"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Driver Beta : 200"
+                        android:id="@+id/car_local_driver_beta"
+                        android:layout_below="@+id/local_waiting_charge"
+                        style="@style/style_for_car_details"
+                        android:layout_marginBottom="5sp"/>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_below="@+id/long_trip_catalogue_detail"
+                android:elevation="5sp"
+                android:id="@+id/long_trip_details"
+                android:layout_above="@+id/lin"
+                android:layout_margin="10sp"
+                android:layout_marginTop="15sp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_marginTop="2sp"
+                            android:layout_marginLeft="2sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Long Trip Catalogue"
+                            android:textStyle="bold|italic"
+                            android:id="@+id/local_trip_catalogue"
+                            android:textSize="20sp"
+                            />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5sp"
+                            android:background="@android:color/darker_gray"
+                            android:layout_margin="3sp"
+                            android:layout_below="@+id/local_trip_catalogue"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Price of Per Km : "
+                            style="@style/style_for_car_details"
+                            android:id="@+id/car_long_trip_per_km"
+                            android:layout_below="@+id/local_trip_catalogue"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/style_for_car_details"
+                            android:id="@+id/car_long_driver_beta"
+                            android:text="Driver Beta: 250/day"
+                            android:layout_below="@+id/car_long_trip_per_km"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/car_long_waiting_charges"
+                            android:text="Waiting Charges : 3000"
+                            style="@style/style_for_car_details"
+                            android:layout_below="@+id/car_long_driver_beta"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Is halting Charges applicable : No"
+                            android:id="@+id/is_halting_charges_applicable"
+                            style="@style/style_for_car_details"
+                            android:layout_below="@+id/car_long_waiting_charges"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Halting Charges : 150/night"
+                            android:id="@+id/is_halting_charges_price"
+                            style="@style/style_for_car_details"
+                            android:visibility="gone"
+                            android:layout_below="@+id/is_halting_charges_applicable"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Is Hills Allowance applicable : No"
+                            android:id="@+id/is_hills_allowance_applicable"
+                            style="@style/style_for_car_details"
+                            android:layout_below="@+id/is_halting_charges_price"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Hills Charges : 2.5/per"
+                            android:id="@+id/hills_allowance_price"
+                            style="@style/style_for_car_details"
+                            android:visibility="gone"
+                            android:layout_below="@+id/is_hills_allowance_applicable"
+                            android:layout_marginBottom="5sp"/>
+                    </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>

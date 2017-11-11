@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "672438244653",
+    "firebase_url": "https://spotdriver-ab566.firebaseio.com",
+    "project_id": "spotdriver-ab566",
+    "storage_bucket": "spotdriver-ab566.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:672438244653:android:d939e5078f937f0f",
+        "android_client_info": {
+          "package_name": "com.example.suriya.spotdrivers"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "672438244653-rlnce8ansshu39dsbeme7pt4n59rnmee.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFtVt2XTk1tlKhhvCGN6p0veaD0XOuXqc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

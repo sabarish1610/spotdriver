@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/select_vechile_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8sp"
+        android:gravity="center"
+        android:text="Which Kind of Vechile Would You like to Register With Us"
+        android:layout_gravity="center_horizontal"
+        android:textSize="15sp"
+        android:textStyle="bold|italic"
+        android:textColor="@android:color/holo_blue_dark" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/vechile_type"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+                android:id="@+id/reg_select_vechile_type">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:padding="24sp"
+                    android:layout_gravity="center"
+                    android:drawableTop="@drawable/taxi"
+                    android:gravity="center"
+                    android:text="CAR"
+                    android:textColor="@drawable/text"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_marginRight="10sp"
+                    android:layout_marginLeft="10sp"
+                    android:background="@android:color/darker_gray"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:padding="24sp"
+                    android:button="@null"
+                    android:layout_marginTop="5sp"
+                    android:layout_marginBottom="5sp"
+                    android:drawableTop="@drawable/van"
+                    android:gravity="center"
+                    android:text="VAN"
+                    android:textColor="@drawable/text"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_marginRight="10sp"
+                    android:layout_marginLeft="10sp"
+                    android:background="@android:color/darker_gray"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:padding="24sp"
+                    android:drawableTop="@drawable/travel_bus"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="BUS"
+                    android:textColor="@drawable/text"/>
+            </RadioGroup>
+    </LinearLayout>
+</LinearLayout>
+

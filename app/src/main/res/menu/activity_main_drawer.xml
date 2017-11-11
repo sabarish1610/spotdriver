@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/car_fragment"
+            android:icon="@drawable/ic_car_image"
+            android:title="Cars" />
+        <item
+            android:id="@+id/driver_fragment"
+            android:icon="@drawable/ic_driver_black"
+            android:title="Drivers" />
+        <item
+            android:id="@+id/chat_fragment"
+            android:icon="@drawable/ic_chat_black"
+            android:title="Chat" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/password_change"
+                android:icon="@drawable/ic_passwordchange"
+                android:title="Change Password" />
+            <item
+                android:id="@+id/logout"
+                android:icon="@drawable/ic_logout"
+                android:title="Logout" />
+        </menu>
+    </item>
+
+</menu>

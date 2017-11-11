@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.suriya.spotdrivers">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <application
+        android:name=".support.Singleton"
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- activities -->
+        <activity android:name=".activity.LoginActivity" />
+        <activity
+            android:name=".activity.needdriver.NeedDriverActivity"
+            android:label="@string/title_activity_need_driver" />
+        <activity
+            android:name=".activity.driver.IAmDriverActivity"
+            android:label="@string/title_activity_iam_driver" />
+        <activity android:name=".activity.driver.CreateDriverProfileAcitivity" />
+        <activity android:name=".activity.needdriver.CreateNeedDriverProfile" />
+        <activity
+            android:name=".activity.needdriver.DriverCompleteProfileActivity"
+            android:label="@string/title_activity_driver_complete_profile" />
+        <activity
+            android:name=".chat.chatroomfragment.activity.ChattingRoom"
+            android:theme="@style/MyTheme" />
+        <activity android:name=".activity.otp.SmsActivity" />
+        <activity
+            android:name=".activity.AlertDialog"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity android:name=".cars.fragment.activity.GetLocationFromGps" />
+        <!-- recievers -->
+        <receiver
+            android:name=".NetworkConnection.ConnectivityReciever"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".broadcastreciever.SmsReceiver">
+            <intent-filter android:priority="99999">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        <!-- Services -->
+        <service android:name=".services.MyFireBaseInstanceIdService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".services.MyFireBaseMessageService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".services.HttpService"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAfzqRDzHIPn0X0kivif0r1NFhfonla5NM" />
+
+        <activity android:name=".cars.fragment.activity.CarSupportActivity" />
+        <activity android:name=".activity.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".introslide.prefManager.orbitowelcome.OrbitoWelcome" />
+        <activity android:name=".introslide.prefManager.driverwelcome.DriverWelcome" />
+        <activity android:name=".introslide.prefManager.vechiledriverwelcome.VechileWelcome"></activity>
+    </application>
+
+</manifest>

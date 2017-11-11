@@ -1,0 +1,370 @@
+<resources>
+    <string name="app_name">SpotDrivers</string>
+    <string name="title_activity_need_driver">NeedDriverActivity</string>
+    <string name="title_driver">Hire Drivers</string>
+    <string name="title_chat">Chat</string>
+    <string name="title_profile">Me</string>
+    <string name="title_activity_iam_driver">IAmDriverActivity</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_driver_complete_profile">DriverCompleteProfileActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="driving_licence_type">Driving Licence Type</string>
+    <!--
+    Driving Licence Type
+    -->
+    <string name="lmv">LMV</string>
+    <string name="lmv_nt">LMV-NT</string>
+    <string name="lmv_tr">LMV-TR</string>
+    <string name="hmv">HMV</string>
+    <string name="hpmv">HPMV</string>
+    <string name="htv">HTV</string>
+    <string name="trailor">TRAILOR</string>
+    <!--
+    error string
+    -->
+    <string name="enter_name">Please enter name</string>
+    <string name="enter_validate_name">name should be more than 3 word</string>
+    <string name="enter_mobile">Please enter mobile</string>
+    <string name="enter_valide_mobile">Please valide mobile number</string>
+    <string name="enter_mail">Please enter mobile</string>
+    <string name="enter_valide_mail">Please valide mail id</string>
+    <string name="enter_amount">Please Enter Amount</string>
+    <string name="enter_age">Please Enter Age</string>
+    <string name="please_enter_correct_age">Please enter valide age</string>
+    <string name="please_enter_Exp">Experience Please</string>
+    <string name="charges_spinner_title">Type of Charges</string>
+    <string name="password_error">Password should have Alpha numeric eg:Ab1@</string>
+    <string name="confirm_password_error">Password doesnot match</string>
+    <string name="password_match">Password matched</string>
+    <string name="no_chat_room_text">No chat Available, Once you started chatting chatting rooms shows here!!</string>
+    <string name="start_chats_with_driver"><u>Starts chat with Driver Now!!</u></string>
+    <!--
+    For otp
+    -->
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title">Hello Food!</string>
+    <string name="slide_1_desc">The easiest way to order food from your favourite restaurant!</string>
+
+    <string name="slide_2_title">Movie Tickets</string>
+    <string name="slide_2_desc">Book movie tickets for your family and friends!</string>
+
+    <string name="slide_3_title">Great Discounts</string>
+    <string name="slide_3_desc">Best discounts on every single service we offer!</string>
+
+    <string name="slide_4_title">World Travel</string>
+    <string name="slide_4_desc">Book tickets of any transportation and travel the world!</string>
+
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">Play Again</string>
+    <string name="title_activity_sms">SmsActivity</string>
+    <string name="action_logout">Logout</string>
+    <string name="msg_enter_mobile">Enter your mobile number to get started!</string>
+    <string name="lbl_name">Name</string>
+    <string name="lbl_email">Email</string>
+    <string name="lbl_mobile">Mobile</string>
+    <string name="lbl_next">NEXT</string>
+    <string name="msg_sit_back">Sit back &amp; Relax! while we verify your mobile number</string>
+    <string name="msg_manual_otp">(Enter the OTP below in case if we fail to detect the SMS automatically)</string>
+    <string name="lbl_enter_otp">Enter OTP</string>
+    <string name="lbl_submit">SUBMIT</string>
+    <string name="image_selected">Image is Selected</string>
+    <string-array name="brand_category">
+        <item>Tata</item>
+        <item>Maruti Suzuki</item>
+        <item>Toyota</item>
+        <item>Hyundai</item>
+        <item>Mahindra</item>
+        <item>Honda</item>
+        <item>Chevrolet</item>
+        <item>Ford</item>
+        <item>Sukoda</item>
+        <item>Volkswagen</item>
+        <item>Fiat</item>
+        <item>Nissan</item>
+        <item>Renault</item>
+        <item>Mitsubishi</item>
+        <item>Mercedes-Benz</item>
+        <item>Audi</item>
+        <item>Mahindra Renault</item>
+        <item>BMW</item>
+        <item>Hindustan Motors</item>
+        <item>Other Brands</item>
+    </string-array>
+    <string-array name="Tata">
+        <item>Aria</item>
+        <item>Estate</item>
+        <item>Grande Dicor</item>
+        <item>Indica</item>
+        <item>Indica E V2</item>
+        <item>Indica V2</item>
+        <item>Indica V2 Turbo</item>
+        <item>Indica Vista</item>
+        <item>Indicab</item>
+        <item>Indigo Cs</item>
+        <item>Indigo Ecs</item>
+        <item>Indigo Marina</item>
+        <item>Indigo Xl</item>
+        <item>Manza</item>
+        <item>Movus</item>
+        <item>Nano</item>
+        <item>Safari</item>
+        <item>Safari Strome</item>
+        <item>Sumo</item>
+        <item>Sumo Gold</item>
+        <item>Sumo Grande</item>
+        <item>TI</item>
+        <item>Venture</item>
+        <item>Vista</item>
+        <item>Vista Tech</item>
+        <item>Winger</item>
+        <item>Xenon Xt</item>
+        <item>Zest</item>
+        <item>Others</item>
+    </string-array>
+    <string-array name="maruti_suzuki">
+        <item>1000</item>
+        <item>800</item>
+        <item>A Star</item>
+        <item>Alto</item>
+        <item>Alto 800</item>
+        <item>Baleno</item>
+        <item>Celerio</item>
+        <item>Ciaz</item>
+        <item>Eeco</item>
+        <item>Ertiga</item>
+        <item>Esteem</item>
+        <item>Grand Vitara</item>
+        <item>Gypsy</item>
+        <item>Kizashi</item>
+        <item>Omni</item>
+        <item>Ritz</item>
+        <item>Swift</item>
+        <item>Swift Dzire</item>
+        <item>Sx4</item>
+        <item>Versa</item>
+        <item>Wagon R</item>
+        <item>Zen</item>
+        <item>Vitara Brezza</item>
+        <item>Others</item>
+    </string-array>
+    <string-array name="Toyoto">
+        <item>Camry</item>
+        <item>Corolla</item>
+        <item>Corolla Altis</item>
+        <item>Etios</item>
+        <item>Etios Liva</item>
+        <item>Fortuner</item>
+        <item>Innova</item>
+        <item>Land Cruiser</item>
+        <item>Prius</item>
+        <item>Qualis</item>
+        <item>Others</item>
+    </string-array>
+    <string-array name="Hyundai">
+        <item>Accent</item>
+        <item>Elantra</item>
+        <item>Elite I20</item>
+        <item>Eon</item>
+        <item>Getz</item>
+        <item>Grand I10</item>
+        <item>I10</item>
+        <item>I20</item>
+        <item>Santa Fe</item>
+        <item>Sonata</item>
+        <item>Terracan</item>
+        <item>Tucson</item>
+        <item>Verna</item>
+        <item>Xcent</item>
+        <item>Others</item>
+    </string-array>
+    <string-array name="Mahindra">
+        <item>Voyeger</item>
+        <item>XUV 500</item>
+        <item>Xylo</item>
+        <item>Hyundai</item>
+        <item>TUV</item>
+        <item>Honda</item>
+        <item>Armada</item>
+        <item>Bolero</item>
+        <item>E 20</item>
+        <item>Quanto</item>
+        <item>Reva</item>
+        <item>Scorpio</item>
+        <item>Thar</item>
+        <item>Verito</item>
+        <item>Others</item>
+    </string-array>
+    <string-array name="Honda">
+        <item>Accord</item>
+        <item>Amaze</item>
+        <item>Brio</item>
+        <item>City</item>
+        <item>Civic</item>
+        <item>Crv</item>
+        <item>Jazz</item>
+        <item>Mobilio</item>
+        <item>Others</item>
+    </string-array>
+    <string-array name="Chevrolet">
+        <item>Aveo</item>
+        <item>Beat</item>
+        <item>Captiva</item>
+        <item>Cruze</item>
+        <item>Enjoy</item>
+        <item>Forester</item>
+        <item>Optra</item>
+        <item>Sail</item>
+        <item>Spark</item>
+        <item>Tavera</item>
+        <item>Others</item>
+    </string-array>
+    <string-array name="Ford">
+        <item>Classic</item>
+        <item>Ecosport</item>
+        <item>Endeavour</item>
+        <item>Escort</item>
+        <item>Fiesta</item>
+        <item>Figo</item>
+        <item>Fusion</item>
+        <item>Ikon</item>
+        <item>Mondeo</item>
+        <item>Others</item>
+    </string-array>
+    <string-array name="Skoda">
+        <item>Fabia</item>
+        <item>Laura</item>
+        <item>Octavia</item>
+        <item>Rapid</item>
+        <item>Superb</item>
+        <item>Yeti</item>
+        <item>Others</item>
+    </string-array>
+    <string-array name="Volkswagen">
+        <item>Passat</item>
+        <item>Phaeton</item>
+        <item>Polo</item>
+        <item>Touareg</item>
+        <item>Vento</item>
+        <item>Beetle</item>
+        <item>Cross Polo</item>
+        <item>Jetta</item>
+        <item>Others</item>
+    </string-array>
+    <string-array name="Fiat">
+        <item>500</item>
+        <item>Adventure</item>
+        <item>Grand Punto</item>
+        <item>Linea</item>
+        <item>Palio</item>
+        <item>Petra</item>
+        <item>Siena</item>
+        <item>Uno</item>
+        <item>Others</item>
+    </string-array>
+    <string-array name="Nissan">
+        <item>370z</item>
+        <item>Evalia</item>
+        <item>Micra</item>
+        <item>Sunny</item>
+        <item>Teana</item>
+        <item>Terrano</item>
+        <item>X Trail</item>
+        <item>Datsun Redi Go</item>
+        <item>Others</item>
+    </string-array>
+    <string-array name="Renault">
+        <item>Duster</item>
+        <item>Fluence</item>
+        <item>Koleos</item>
+        <item>Pulse</item>
+        <item>Scala</item>
+        <item>Kwid</item>
+        <item>Lodgy</item>
+        <item>Others</item>
+    </string-array>
+    <string-array name="Mitsubishi">
+        <item>Cedia</item>
+        <item>Lancer</item>
+        <item>Montero</item>
+        <item>Outlander</item>
+        <item>Pajero</item>
+        <item>Others</item>
+    </string-array>
+    <string-array name="Mercedes_Benz">
+        <item>A Class</item>
+        <item>B Class</item>
+        <item>C Class</item>
+        <item>Cla Class</item>
+        <item>Cls Class</item>
+        <item>E Class</item>
+        <item>G Class</item>
+        <item>GI Class</item>
+        <item>M Class</item>
+        <item>MI Class</item>
+        <item>R Class</item>
+        <item>S Class</item>
+        <item>Sdl</item>
+        <item>SI Class</item>
+        <item>Slk Class</item>
+        <item>Sls Class</item>
+        <item>Viano</item>
+        <item>Others</item>
+    </string-array>
+    <string-array name="Audi">
+        <item>A7</item>
+        <item>A8</item>
+        <item>A8 L</item>
+        <item>A8I</item>
+        <item>Q3</item>
+        <item>Q5</item>
+        <item>Q7</item>
+        <item>R8</item>
+        <item>Rs 5</item>
+        <item>Rs 7</item>
+        <item>S6</item>
+        <item>Tt</item>
+        <item>A3</item>
+        <item>A4</item>
+        <item>A6</item>
+        <item>Others</item>
+    </string-array>
+    <string-array name="Mahindra_Renault">
+        <item>Logan</item>
+        <item>Others</item>
+    </string-array>
+    <string-array name="Hindustan_Motors">
+        <item>Ambassador</item>
+        <item>Contessa</item>
+        <item>Others</item>
+    </string-array>
+    <string name="locality_oops">Sorry for inconvience drivers not available</string>
+    <string name="terms_and_conditions"><u>Terms of services and Privacy Policy</u></string>
+    <string name="view_car_profile"><u>View Cars</u></string>
+    <string name="sign_up">By signing up, you agree to our</string>
+
+    <string-array name="licence_list">
+        <item>LMV</item>
+        <item>LMV-NT</item>
+        <item>LMV-TR</item>
+        <item>HMV</item>
+        <item>HPMV</item>
+        <item>HTV</item>
+        <item>TRAILOR</item>
+    </string-array>
+    <string-array name="salary_type">
+        <item>Day</item>
+        <item>Month</item>
+    </string-array>
+    <string name="other_brand">Other Brands</string>
+    <string name="other">Others</string>
+</resources>

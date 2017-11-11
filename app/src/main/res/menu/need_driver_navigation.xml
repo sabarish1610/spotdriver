@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/car_details"
+        android:icon="@drawable/ic_car_image"
+        android:title="Get Car"/>
+    <item
+        android:id="@+id/drivers"
+        android:icon="@drawable/ic_driver_black"
+        android:title="@string/title_driver" />
+
+    <item
+        android:id="@+id/driver_chat"
+        android:icon="@drawable/ic_chat_black"
+        android:title="@string/title_chat" />
+
+    <!--<upload_car_image
+        android:id="@+id/user_profile"
+        android:icon="@drawable/ic_profile_black"
+        android:title="@string/title_profile" />-->
+
+</menu>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/header_cover_image"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:scaleType="centerCrop" >
+    </RelativeLayout>
+    <!--android:src="@drawable/background"-->
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/user_profile_photo"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_below="@+id/header_cover_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-65dp"
+        android:elevation="5dp"
+        android:padding="20dp"
+        android:src="@android:drawable/sym_def_app_icon"
+        app:civ_border_color="@color/colorPrimary"
+        app:civ_border_width="1dp"/>
+
+    <RelativeLayout
+        android:id="@+id/profile_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header_cover_image"
+        android:elevation="4dp"
+        android:layout_marginLeft="15sp"
+        android:layout_marginRight="15sp"
+        android:layout_marginBottom="15sp"
+        android:background="@drawable/shadow_layout">
+        <TextView
+            android:id="@+id/user_profile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:text="Viral Android"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/complete_profile_experience"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/user_profile_name"
+            android:layout_centerHorizontal="true"
+            android:text="with 2.5 years Experience"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:background="@android:color/black"
+            android:layout_marginTop="2sp"
+            android:layout_below="@id/complete_profile_experience"/>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/view"
+            android:layout_marginTop="0.5dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/driver_profile_cost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Cost :"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/in_driver_age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/driver_profile_cost"
+                    android:layout_alignStart="@+id/driver_profile_cost"
+                    android:layout_below="@+id/driver_profile_cost"
+                    android:layout_marginTop="15dp"
+                    android:text="Age :"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/in_driver_gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/in_driver_age"
+                    android:layout_alignStart="@+id/in_driver_age"
+                    android:layout_below="@+id/in_driver_age"
+                    android:layout_marginTop="15dp"
+                    android:text="Gender :"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/in_driver_mobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/in_driver_gender"
+                    android:layout_alignStart="@+id/in_driver_gender"
+                    android:layout_below="@+id/in_driver_gender"
+                    android:layout_marginBottom="15sp"
+                    android:layout_marginTop="15dp"
+                    android:text="Mobile Number :"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/in_driver_licence_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/in_driver_mobile"
+                    android:layout_alignStart="@+id/in_driver_mobile"
+                    android:layout_below="@+id/in_driver_mobile"
+                    android:layout_marginBottom="15sp"
+                    android:text="Licence Type :"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/in_driver_licence_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/in_driver_licence_type"
+                    android:layout_alignStart="@+id/in_driver_licence_type"
+                    android:layout_below="@+id/in_driver_licence_type"
+                    android:layout_marginBottom="15sp"
+                    android:text="Licence Number :"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/in_driver_locality"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/in_driver_licence_number"
+                    android:layout_alignStart="@+id/in_driver_licence_number"
+                    android:layout_below="@+id/in_driver_licence_number"
+                    android:layout_marginBottom="15sp"
+                    android:text="Prefferened Locality :"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/in_driver_job_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/in_driver_locality"
+                    android:layout_alignStart="@+id/in_driver_locality"
+                    android:layout_below="@+id/in_driver_locality"
+                    android:layout_marginBottom="15sp"
+                    android:text="Job Type :"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/image_loading"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp" />
+
+</RelativeLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:id="@+id/la"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:layout_centerInParent="true">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/chat_room_profile_pic"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:src="@android:drawable/sym_def_app_icon"
+            app:civ_border_color="@color/black"
+            app:civ_border_width="1dp" />
+        <TextView
+            android:id="@+id/chat_room_user_Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User Name"
+            android:textStyle="bold"
+            android:textSize="22dp"
+            android:textColor="@color/black"
+            android:layout_toRightOf="@+id/chat_room_profile_pic"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp" />
+
+        <TextView android:id="@+id/timestamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12:00 AM"
+            android:textSize="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id = "@+id/text_message"
+            android:text="Hi welcome,here"
+            android:textColor="#888888"
+            android:layout_below="@+id/chat_room_user_Name"
+            android:layout_toRightOf="@+id/chat_room_profile_pic"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="3dp"/>
+
+        <TextView android:id="@+id/count"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:textSize="10dp"
+            android:layout_centerInParent="true"
+            android:textColor="@android:color/white"
+            android:layout_alignParentRight="true"
+            android:text="5"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/bg_circle"/>
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height=".3sp"
+        android:layout_below="@+id/la"
+        android:background="@android:color/darker_gray"
+        android:layout_marginRight="8sp"
+        android:layout_marginLeft="35sp"/>
+
+</RelativeLayout>

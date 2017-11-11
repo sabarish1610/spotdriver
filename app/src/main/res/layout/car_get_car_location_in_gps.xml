@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/bg_view_sms" >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                style="@style/searchToolbar"
+                android:drawableLeft="@android:drawable/ic_menu_search"
+                android:layout_marginRight="30sp"
+                android:visibility="gone"
+                android:drawablePadding="5sp"
+                android:hint="Enter Place Here"
+                />
+            <ImageView
+                android:id="@+id/clear_place"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="35dp"
+                android:visibility="gone"
+                android:layout_marginTop="5sp"
+                android:layout_marginRight="35dp"
+
+                app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <Button
+        android:id="@+id/get_current_location_in_gps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_get_location"
+        android:text="Current Location"
+        android:padding="15sp"
+        android:background="?attr/selectableItemBackground"
+        android:textColor="@color/blue"
+        android:textAlignment="textStart"
+        />
+</LinearLayout>

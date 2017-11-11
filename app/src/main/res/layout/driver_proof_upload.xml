@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/driver_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+    </android.support.v7.widget.Toolbar>
+    <RelativeLayout
+        android:layout_below="@+id/driver_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/licence">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Licence Proof"
+            android:textStyle="bold|italic"
+            android:layout_centerInParent="true"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:layout_margin="10dp"
+            />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:id="@+id/licence_image"
+        android:layout_below="@+id/licence">
+
+        <ImageView
+            android:id="@+id/licence_front_image"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:elevation="4dp"
+            android:layout_margin="5dp"
+            app:srcCompat="@android:drawable/sym_def_app_icon" />
+
+        <ImageView
+            android:id="@+id/licence_back_image"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:elevation="4dp"
+            app:srcCompat="@android:drawable/sym_def_app_icon" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/licence_text"
+        android:layout_below="@+id/licence_image"
+        android:weightSum="2"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/licence_proof_front"
+            android:layout_weight="1"
+            android:text="Licence Front"
+            android:gravity="center"
+            android:drawableRight="@drawable/ic_attach_black"
+            android:drawableTint="@color/white"
+            android:textColor="@color/white"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/licence_proof_back"
+            android:drawableTint="@color/white"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Licence Back"
+            android:drawableRight="@drawable/ic_attach_black"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/licence_text"
+        android:id="@+id/aadhar_text">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Other Proof"
+            android:layout_centerInParent="true"
+            android:textStyle="bold|italic"
+            android:textColor="@color/white"
+            android:textSize="20dp"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/aadhar_text"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:id="@+id/aadhar_image">
+
+        <ImageView
+            android:id="@+id/other_proof_front"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:elevation="4dp"
+            android:layout_margin="5dp"
+            app:srcCompat="@android:drawable/sym_def_app_icon" />
+
+        <ImageView
+            android:id="@+id/other_proof_back"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:elevation="4dp"
+            android:layout_margin="5dp"
+            app:srcCompat="@android:drawable/sym_def_app_icon" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/aadhar_image"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/other_proof_front_text"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Other Proof Front"
+            android:drawableTint="@color/white"
+            android:textColor="@color/white"
+            android:drawableRight="@drawable/ic_attach_black"/>
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:id="@+id/other_proof_back_text"
+            android:text="Other Proof Back"
+            android:drawableTint="@color/white"
+            android:textColor="@color/white"
+            android:drawableRight="@drawable/ic_attach_black"/>
+    </LinearLayout>
+</RelativeLayout>

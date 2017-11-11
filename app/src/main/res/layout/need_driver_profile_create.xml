@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/side_nav_bar">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="15dp">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/user_profilr_pic"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_gravity="center"
+            app:civ_border_color="@android:color/black"
+            android:layout_marginTop="13dp"
+            app:civ_border_width="1dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/ic_launcher"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10sp"
+            android:layout_below="@+id/user_profilr_pic"
+            android:id="@+id/name_details">
+
+            <EditText
+                android:id="@+id/user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5sp"
+                android:layout_weight="2"
+                android:background="@drawable/edit_text_round_bg"
+                android:hint="First Name"
+                android:padding="10dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:hint="Last Name"
+                android:padding="10sp"
+                android:layout_marginLeft="5sp"
+                android:background="@drawable/edit_text_round_bg"
+                android:id="@+id/user_last_name"/>
+        </LinearLayout>
+        <TextView
+            android:layout_below="@+id/name_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/user_name_error"
+            android:text=""
+            android:layout_marginLeft="2sp"
+            android:textColor="@android:color/holo_red_dark"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_name_error"
+            android:orientation="horizontal"
+            android:id="@+id/phone_details">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:id="@+id/country_code"
+                android:hint="+91"
+                android:background="@drawable/edit_text_round_bg"
+                android:padding="10dp"
+                android:editable="false"
+                android:layout_marginRight="5sp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:hint="Mobile No"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:padding="10sp"
+                android:layout_marginLeft="5sp"
+                android:background="@drawable/edit_text_round_bg"
+                android:id="@+id/user_phone_number"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mobile_number_error"
+            android:layout_marginLeft="2sp"
+            android:layout_below="@+id/phone_details"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_below="@+id/mobile_number_error"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="E-Mail Id (Optional)"
+                android:padding="10sp"
+                android:inputType="textEmailAddress"
+                android:layout_marginLeft="5sp"
+                android:background="@drawable/edit_text_round_bg"
+                android:id="@+id/user_email"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/user_email_error"
+                android:layout_marginLeft="2sp"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_below="@+id/user_email"/>
+
+            <EditText
+                android:id="@+id/user_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5sp"
+                android:inputType="textPassword"
+                android:background="@drawable/edit_text_round_bg"
+                android:hint="PassWord"
+                android:padding="10sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/user_password_error"
+                android:layout_marginLeft="2sp"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_below="@+id/user_email"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Confirm Password"
+                android:padding="10sp"
+                android:inputType="textPassword"
+                android:layout_marginLeft="5sp"
+                android:background="@drawable/edit_text_round_bg"
+                android:id="@+id/user_confirm_password"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/user_password_confirm_error"
+                android:layout_marginLeft="2sp"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_below="@+id/user_email"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/user_sign_up"
+                android:text="Sign Up"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:layout_gravity="center"
+                android:background="@drawable/yellow_button_bg"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:text="By Signing up, you agree to our"
+                android:layout_gravity="center"/>
+            <TextView
+                android:id="@+id/terms_condition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="@string/terms_and_conditions"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- <android.support.v7.widget.Toolbar
+         android:id="@+id/driver_toolbar"
+         android:layout_width="368dp"
+         android:layout_height="56dp"
+         android:background="?attr/colorPrimary"
+         android:elevation="4dp"
+         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+         app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+         android:layout_marginLeft="8dp"
+         app:layout_constraintLeft_toLeftOf="parent"
+         app:layout_constraintTop_toTopOf="parent"
+         android:layout_marginTop="0dp"
+         android:layout_marginRight="8dp"
+         app:layout_constraintRight_toRightOf="parent">
+         </android.support.v7.widget.Toolbar>
+
+     <de.hdodenhof.circleimageview.CircleImageView
+         android:id="@+id/need_driver_profile_pic"
+         android:layout_width="75dp"
+         android:layout_height="75dp"
+         android:src="@android:drawable/sym_def_app_icon"
+         app:civ_border_color="@color/black"
+         app:civ_border_width="1dp"
+         android:layout_marginRight="8dp"
+         app:layout_constraintRight_toRightOf="parent"
+         android:layout_marginLeft="8dp"
+         app:layout_constraintLeft_toLeftOf="parent"
+         app:layout_constraintHorizontal_bias="0.501"
+         android:layout_marginStart="8dp"
+         android:layout_marginEnd="8dp"
+         android:layout_marginTop="8dp"
+         app:layout_constraintTop_toBottomOf="@+id/driver_toolbar" />
+
+     <ImageView
+         android:id="@+id/imageView"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:tint="@color/white"
+         app:srcCompat="@drawable/ic_profile_black"
+         android:layout_marginTop="32dp"
+         app:layout_constraintTop_toBottomOf="@+id/need_driver_profile_pic"
+         android:layout_marginLeft="16dp"
+         app:layout_constraintLeft_toLeftOf="parent"
+         android:layout_marginStart="16dp" />
+
+     <EditText
+         android:id="@+id/need_driver_name"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:ems="10"
+         android:background="@drawable/edit_text_back_ground"
+         android:padding="5sp"
+         android:elevation="4sp"
+         android:inputType="textPersonName"
+         android:hint="Name"
+         app:layout_constraintLeft_toRightOf="@+id/imageView"
+         android:layout_marginLeft="8dp"
+         android:layout_marginStart="8dp"
+         app:layout_constraintTop_toTopOf="@+id/imageView"
+         app:layout_constraintBottom_toBottomOf="@+id/imageView" />
+     <EditText
+         android:id="@+id/need_driver_last_name"
+         android:layout_width="75dp"
+         android:layout_height="wrap_content"
+         android:ems="10"
+         android:inputType="textPersonName"
+         android:hint="LN"
+         android:background="@drawable/edit_text_back_ground"
+         android:padding="5sp"
+         android:elevation="4sp"
+         app:layout_constraintBottom_toBottomOf="@+id/need_driver_name"
+         app:layout_constraintLeft_toRightOf="@+id/need_driver_name"
+         android:layout_marginLeft="8dp"
+         android:layout_marginStart="8dp" />
+
+     <ImageView
+         android:id="@+id/imageView5"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         app:srcCompat="@drawable/ic_age_black"
+         android:layout_marginLeft="16dp"
+         android:tint="@color/white"
+         app:layout_constraintLeft_toLeftOf="parent"
+         android:layout_marginTop="32dp"
+         app:layout_constraintTop_toBottomOf="@+id/imageView"
+         android:layout_marginStart="16dp" />
+
+     <EditText
+         android:id="@+id/need_driver_age"
+         android:layout_width="150dp"
+         android:layout_height="wrap_content"
+         android:ems="10"
+         android:hint="Your Age"
+         android:maxLength="2"
+         android:background="@drawable/edit_text_back_ground"
+         android:padding="5sp"
+         android:elevation="4sp"
+         android:inputType="phone"
+         app:layout_constraintTop_toTopOf="@+id/imageView5"
+         app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+         app:layout_constraintLeft_toRightOf="@+id/imageView5"
+         android:layout_marginLeft="8dp"
+         android:layout_marginStart="8dp" />
+
+     <ImageView
+         android:id="@+id/imageView6"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         app:srcCompat="@drawable/phone"
+         android:layout_marginLeft="16dp"
+         android:tint="@color/white"
+         app:layout_constraintLeft_toLeftOf="parent"
+         android:layout_marginTop="32dp"
+         app:layout_constraintTop_toBottomOf="@+id/imageView5"
+         android:layout_marginStart="16dp" />
+
+     <EditText
+         android:id="@+id/need_driver_phone_number"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:ems="10"
+         android:hint="Mobile Number"
+         android:background="@drawable/edit_text_back_ground"
+         android:padding="5sp"
+         android:elevation="4sp"
+         android:inputType="phone"
+         app:layout_constraintTop_toTopOf="@+id/imageView6"
+         app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+         app:layout_constraintLeft_toRightOf="@+id/imageView6"
+         android:layout_marginLeft="8dp"
+         android:layout_marginStart="8dp" />
+
+     <ImageView
+         android:id="@+id/imageView7"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         app:srcCompat="@drawable/ic_email_black"
+         android:layout_marginTop="32dp"
+         android:tint="@color/white"
+         app:layout_constraintTop_toBottomOf="@+id/imageView6"
+         android:layout_marginLeft="16dp"
+         app:layout_constraintLeft_toLeftOf="parent"
+         android:layout_marginStart="16dp" />
+
+     <EditText
+         android:id="@+id/need_driver_email"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:ems="10"
+         android:hint="E-Mail"
+         android:inputType="textEmailAddress"
+         app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+         android:background="@drawable/edit_text_back_ground"
+         android:padding="5sp"
+         android:elevation="4sp"
+         app:layout_constraintTop_toTopOf="@+id/imageView7"
+         app:layout_constraintLeft_toRightOf="@+id/imageView7"
+         android:layout_marginLeft="8dp"
+         android:layout_marginStart="8dp" />
+
+     <ImageView
+         android:id="@+id/imageView9"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         app:srcCompat="@drawable/ic_emergency_icon"
+         android:layout_marginLeft="16dp"
+         app:layout_constraintLeft_toLeftOf="parent"
+         android:tint="@color/white"
+         android:layout_marginTop="32dp"
+         app:layout_constraintTop_toBottomOf="@+id/imageView7"
+         android:layout_marginStart="16dp" />
+
+     <EditText
+         android:id="@+id/need_driver_emergency_contact_number_1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:ems="10"
+         android:hint="Emergency Contact-1"
+         android:inputType="phone"
+         app:layout_constraintTop_toTopOf="@+id/imageView9"
+         android:background="@drawable/edit_text_back_ground"
+         android:padding="5sp"
+         android:elevation="4sp"
+         app:layout_constraintBottom_toBottomOf="@+id/imageView9"
+         app:layout_constraintLeft_toRightOf="@+id/imageView9"
+         android:layout_marginLeft="8dp"
+         android:layout_marginStart="8dp" />
+
+     <ImageView
+         android:id="@+id/imageView10"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         app:srcCompat="@drawable/ic_emergency_icon"
+         android:layout_marginLeft="16dp"
+         app:layout_constraintLeft_toLeftOf="parent"
+         android:layout_marginTop="32dp"
+         android:tint="@color/white"
+         app:layout_constraintTop_toBottomOf="@+id/imageView9"
+         android:layout_marginStart="16dp" />
+
+     <EditText
+         android:id="@+id/need_driver_emergency_contact_number_2"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:hint="Emergency Contact-2"
+         android:ems="10"
+         android:inputType="phone"
+         app:layout_constraintTop_toTopOf="@+id/imageView10"
+         android:background="@drawable/edit_text_back_ground"
+         android:padding="5sp"
+         android:elevation="4sp"
+         app:layout_constraintBottom_toBottomOf="@+id/imageView10"
+         app:layout_constraintLeft_toRightOf="@+id/imageView10"
+         android:layout_marginLeft="8dp"
+         android:layout_marginStart="8dp" />
+
+     <TextView
+         android:id="@+id/user_name_error"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text=""
+         android:textColor="@android:color/holo_red_dark"
+         app:layout_constraintTop_toBottomOf="@+id/need_driver_name"
+         android:layout_marginLeft="8dp"
+         app:layout_constraintLeft_toLeftOf="@+id/need_driver_name"
+         android:layout_marginStart="8dp" />
+
+     <TextView
+         android:id="@+id/user_age_error"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text=""
+         android:textColor="@android:color/holo_red_dark"
+         app:layout_constraintTop_toBottomOf="@+id/need_driver_age"
+         android:layout_marginLeft="8dp"
+         app:layout_constraintLeft_toLeftOf="@+id/need_driver_age"
+         android:layout_marginStart="8dp" />
+
+     <TextView
+         android:id="@+id/mobile_number_error"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text=""
+         android:textColor="@android:color/holo_red_dark"
+         app:layout_constraintTop_toBottomOf="@+id/need_driver_phone_number"
+         android:layout_marginLeft="8dp"
+         app:layout_constraintLeft_toLeftOf="@+id/need_driver_phone_number"
+         android:layout_marginStart="8dp" />
+
+     <TextView
+         android:id="@+id/user_email_error"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text=""
+         android:textColor="@android:color/holo_red_dark"
+         app:layout_constraintTop_toBottomOf="@+id/need_driver_email"
+         android:layout_marginLeft="8dp"
+         app:layout_constraintLeft_toLeftOf="@+id/need_driver_email"
+         android:layout_marginStart="8dp" />
+
+     <TextView
+         android:id="@+id/emeregncy_error_1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text=""
+         android:textColor="@android:color/holo_red_dark"
+         app:layout_constraintTop_toBottomOf="@+id/need_driver_emergency_contact_number_1"
+         android:layout_marginLeft="8dp"
+         app:layout_constraintLeft_toLeftOf="@+id/need_driver_emergency_contact_number_1"
+         android:layout_marginStart="8dp" />
+
+     <TextView
+         android:id="@+id/emeregency_error_2"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text=""
+         android:textColor="@android:color/holo_red_dark"
+         app:layout_constraintTop_toBottomOf="@+id/need_driver_emergency_contact_number_2"
+         android:layout_marginLeft="8dp"
+         app:layout_constraintLeft_toLeftOf="@+id/need_driver_emergency_contact_number_2"
+         android:layout_marginStart="8dp" />
+
+     <RadioGroup
+         android:id="@+id/user_gender"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginLeft="16dp"
+         android:layout_marginStart="16dp"
+         android:layout_marginTop="-1dp"
+         android:gravity="center"
+         android:orientation="horizontal"
+         app:layout_constraintLeft_toRightOf="@+id/need_driver_age"
+         app:layout_constraintTop_toTopOf="@+id/need_driver_age">
+
+         <RadioButton
+             android:id="@+id/user_male"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:background="@drawable/radio"
+             android:button="@null"
+             android:gravity="center"
+             android:padding="5dp"
+             android:text="Male"
+             android:textColor="@drawable/text" />
+
+         <RadioButton
+             android:id="@+id/user_female"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="15dp"
+             android:layout_marginStart="15dp"
+             android:background="@drawable/radio"
+             android:button="@null"
+             android:gravity="center"
+             android:padding="5dp"
+             android:text="Female"
+             android:textColor="@drawable/text" />
+     </RadioGroup>-->
+
+</RelativeLayout>

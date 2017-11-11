@@ -1,0 +1,31 @@
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="350sp"
+    android:layout_height="350sp"
+    android:background="#003b3939">
+
+    <ImageView
+        android:layout_width="250sp"
+        android:layout_height="250sp"
+        android:id="@+id/view_image"
+        android:layout_centerHorizontal="true" />
+    <ImageView
+        android:id="@+id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_action_name"
+        android:layout_below="@+id/view_image"
+        android:layout_centerHorizontal="true" />
+
+    <ProgressBar
+        android:id="@+id/imageloading"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="99dp"
+        android:visibility="gone"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

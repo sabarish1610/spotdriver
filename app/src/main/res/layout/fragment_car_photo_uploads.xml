@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/side_nav_bar">
+    <ImageView
+        android:layout_width="100sp"
+        android:layout_height="100sp"
+        android:id="@+id/selectImage"
+        android:src="@drawable/ic_add_car_images"
+        android:layout_above="@+id/recyclerview"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="67dp" />
+    <android.support.v7.widget.RecyclerView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Image"
+        android:textColor="@android:color/holo_blue_bright"
+        android:layout_alignBottom="@+id/selectImage"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/sign_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/recyclerview"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="82dp"
+        android:textSize="25sp"
+        android:textColor="@android:color/holo_blue_bright"
+        android:text="Join with ORBITO"
+        android:gravity="center"/>
+
+</RelativeLayout>
